@@ -1,0 +1,163 @@
+:root{
+  /* colores principales */
+  --first-color:#d90062;
+  /* --first-color:crimson; */
+  --first-alpha-color:rgba(217, 0, 98, 0.75);
+  --second-color:#14192D;
+  /* --second-color:rgb(1, 38, 1); */
+  --second-alpha-color:rgba(20, 25, 45, 0.75);
+  --third-color:#501464;
+  --third-alpha-color:rgba(80, 20, 100, 0.75);
+  /* Escalas de grises */
+  --white-color:#FFFFFF;
+  --white-color2:blanchedalmond;
+  --fondo_verde:#2f4f30;
+  --gray-color:#cccccc;
+  --gray-dark-color:#666666;
+  --black-color:#000000;
+  /*Otros*/
+  --link-color:#509EE3;
+  --title-color:#333333;
+  --text-color:#222222;
+  --white-alpha-color:rgba(255, 255, 255, 0.5);
+  --black-alpha-color:rgba(0, 0, 0, 0.5);
+  --font:"Raleway", sans-serif;
+  --max-width:1200px ;
+  --header-height: 4rem;
+  }
+  
+  html{
+      /* la caja empieza en el borde */
+      box-sizing: border-box;
+      font-family: var(--font);
+      /*el parametro rem es relativo al tamaño absoluto en px de la fuente en la etiqueta html */
+      font-size: 16px; 
+      /*scroll-behavior especifica el comportamiento del desplazamiento */
+      scroll-behavior: smooth;  /*suave*/
+  }
+  
+  *, *::after, *::before{
+      box-sizing: inherit; /*Heredan de html*/
+  }
+  
+  body{
+      margin: 0;
+      /*Sacamos el scroll hprizonral, cuando la imagen es muy grande*/
+      overflow-x: hidden;
+      color: var(--text-color);
+      background-color: var(--fondo_verde);
+  }
+
+  h1{
+      margin: 0;
+      font-size: 2.5rem;
+      color: #FFFFFF;
+  }
+  h2{
+      margin: 0;
+      font-size: 2rem;
+      text-align: center;
+      color: #000000;
+  }
+  h3{
+      margin: 0;
+      font-size: 1.25rem;
+  }
+  h4{
+      margin: 0;
+      font-size: 1rem; 
+  }
+  h5{
+      margin: 0;
+      font-size: 0.85rem;
+  }
+  h6{
+      margin: 0;
+      font-size: 0.7rem;
+  }
+  
+      
+
+  header{
+  padding: 1rem 0;
+  text-align: center;
+  background-color: black;
+  }
+
+  .controles{
+      margin-top: 1rem;
+      /* text-align: center; */
+  }
+
+  .botones1{
+      display: flex;
+      justify-content: space-evenly;
+  }
+
+  .boton{
+      font-size:16px;
+      font-weight:bold;
+      color:white;
+      background:#638cb5;
+      width: 10rem;;
+      height:2.5rem;
+      border-radius: 25% 10%;
+  }
+  .boton:first-child{
+      background:#d32a2a;
+      border-radius:  0%;
+  }
+
+  .botonApagado{
+      font-size:16px;
+      font-weight:bold;
+      color:white;
+      background:#565c63;
+      width: 10rem;;
+      height:2.5rem;
+      border-radius: 25% 10%;
+  }
+
+  .jugador{
+      margin-top: 1rem;
+      /* text-align: center; */
+      min-height: 350px;
+  }
+
+  #jugador-carta{
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      
+  }
+
+  
+
+  #computadora-carta{
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+  }
+
+
+
+  .carta{
+      width: 12rem;
+      margin-left: -50px;
+      margin-top: 1rem;
+      animation-name: visible;
+      /* animation-duration:0.3s ; */
+    
+  }
+ 
+  @keyframes visible{
+      0%{
+          opacity: 0;
+      }
+      100%{
+          opacity: 1;
+      }
+  }
+
+
+  
